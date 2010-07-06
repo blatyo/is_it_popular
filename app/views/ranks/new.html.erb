@@ -1,4 +1,9 @@
 <%= form_for @page_rank, :url => ranks_path do |f| %>
-  <%= f.text_field :site %>
-  <%= f.submit "Go" %>
+  <p id="input">
+    <%= f.text_field :site %>
+    <%= f.submit "Go" %>
+  </p>
+  <p id="example">
+    e.g. www.google.com
+  </p>
 <% end %>
