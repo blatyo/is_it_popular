@@ -1,0 +1,23 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  site: MyString
+  alexa_rank: 1
+  google_rank: 1
+  alexa_backlinks: 1
+  alltheweb_backlinks: 1
+  altavista_backlinks: 1
+  bing_backlinks: 1
+  google_backlinks: 1
+  yahoo_backlinks: 1
+
+two:
+  site: MyString
+  alexa_rank: 1
+  google_rank: 1
+  alexa_backlinks: 1
+  alltheweb_backlinks: 1
+  altavista_backlinks: 1
+  bing_backlinks: 1
+  google_backlinks: 1
+  yahoo_backlinks: 1
