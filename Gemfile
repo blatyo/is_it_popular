@@ -6,7 +6,7 @@ gem 'rails', '3.0.0.beta4'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'mysql'
-gem 'PageRankr', '>=1.4.2'
+gem 'PageRankr', '>=1.4.3'
 
 # Use unicorn as the web server
 # gem 'unicorn'
