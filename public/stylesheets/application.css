@@ -37,8 +37,41 @@ a:visited, a:hover, a {
 	margin-top: 180px;
 }
 
-span#site {
+span.site {
 	color: #E3A43F;
+}
+
+#details h3 {
+	margin: 10px 0;
+}
+
+.stat {
+	width: 600px;
+	margin: 0 auto;
+	color: #FFFFFF;
+}
+
+.stat div {
+	float: left;
+	
+}
+
+div.tracker {
+	width: 200px;
+}
+
+div.rank, div.backlinks {
+	font-size: 30px;
+	width: 200px;
+}
+
+div.info {
+	color: #E8D995;
+}
+
+.clear {
+	float: none;
+	clear: both;
 }
 
 span.punctuation {
@@ -51,6 +84,11 @@ span.punctuation {
   font-size: 35px;
 	text-align: center;
 	font-family: Helvetica, Verdana, Arial, sans-serif;
+}
+
+#details {
+	display: none;
+	height: 350px;
 }
 
 p {
@@ -79,4 +117,19 @@ p#error {
 form {
 	margin: 200px auto 0;
 	width: 500px;
+}
+
+#footer {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	color: #FFFFFF;
+}
+
+#footer a {
+	margin: 0;
+}
+
+.links {
+	margin: 0px auto;
 }

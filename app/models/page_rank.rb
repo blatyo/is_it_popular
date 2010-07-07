@@ -3,6 +3,8 @@ class PageRank < ActiveRecord::Base
   require 'strscan'
   GOOGLES_BACKLINKS = {:alexa=>727036, :google=>1200000000, :bing=>211000000, :altavista=>137000000, :yahoo=>249372630, :alltheweb=>74800000}
   GOOGLES_RANKS = {:alexa=>1, :google=>10}
+  BACKLINK_TRACKERS = PageRankr.backlink_trackers
+  RANK_TRACKERS = PageRankr.rank_trackers
   
   validates_format_of :site, :with => /https?:\/\/[\w\.\-](:[1-9]\d*)?/, :message => "That's one ugly url. Try something prettier!"
   

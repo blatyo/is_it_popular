@@ -1,5 +1,30 @@
-<div id="popular">
-  <h3>is <span id="site"><%= prettify(@page_rank.site) %></span> popular<span class="punctuation">?</span></h3>
-  <h2><%= answer @page_rank.popular? %></h2>
-  <p><%= link_to "back", root_path %><%= link_to "why?", "#" %></p>
+<div id="content">
+  <div id="popular">
+    <h3>is <span class="site"><%= prettify(@page_rank.site) %></span> popular<span class="punctuation">?</span></h3>
+    <h2><%= answer @page_rank.popular? %></h2>
+  </div>
+  <div id="details">
+    <h3>the stats</h3>
+    <div class="stat">
+      <div class="tracker"><span class="site">google</span> page rank</div>
+      <div class="rank"><%= google_page_rank @page_rank %></div>
+      <div class="info">10 is highest</div>
+      <div class="clear"></div>
+    </div>
+    <div class="stat">
+      <div class="tracker"><span class="site">alexa</span> rank</div>
+      <div class="rank"><%= alexa_rank @page_rank %></div>
+      <div class="info">1 is highest</div>
+      <div class="clear"></div>
+    </div>
+    <% PageRank::BACKLINK_TRACKERS.each do |tracker| %>
+      <div class="stat">
+        <div class="tracker"><span class="site"><%= tracker %></span> inbound links</div>
+        <div class="backlinks"><%= @page_rank.backlinks tracker %></div>
+        <div class="info">higher is better</div>
+        <div class="clear"></div>
+      </div>
+    <% end %>
+  </div>
 </div>
+<p class="links"><%= link_to "back", root_path %><%= link_to "stats", "#", :id => "stats", :class => "off" %></p>

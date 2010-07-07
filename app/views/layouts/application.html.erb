@@ -3,6 +3,7 @@
 <head>
   <title>is it popular?</title>
   <%= stylesheet_link_tag :all %>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
 </head>
@@ -10,5 +11,9 @@
   <h1>is <span id="site">it</span> popular<span class="punctuation">?</span></h1>
   <p id="error">&nbsp;<%= flash[:error] %></p>
   <%= yield %>
+  <div id="footer">
+    created by <a href="http://www.allenmadsen.com">Allen Madsen</a> &copy; 2010
+  </div>
+  <a href="http://github.com/blatyo/is_it_popular"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub" /></a>
 </body>
 </html>
