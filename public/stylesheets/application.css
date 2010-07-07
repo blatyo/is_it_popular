@@ -1,0 +1,68 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #4E7085 url('/images/bg.jpg') repeat;
+	color: #78AA9B;
+	font-family: Helvetica, Verdana, Arial, sans-serif;
+}
+
+h1 {
+	font-size: 100px;
+	color: #FFFFFF;
+	font-family: Helvetica, Verdana, Arial, sans-serif;
+	text-align: center;
+}
+
+h2, h3 {
+	text-align: center;
+}
+
+h2 {
+	color: #FFFFFF;
+	font-size: 150px;
+	margin-top: -20px;
+}
+
+#popular {
+	margin-top: 180px;
+}
+
+span#site {
+	color: #E3A43F;
+}
+
+span#question {
+	color: #E8D995;
+}
+
+#page_rank_site {
+	height: 50px;
+	width: 400px;
+  font-size: 35px;
+	text-align: center;
+}
+
+p {
+	text-align: center;
+}
+
+#page_rank_submit {
+	height: 52px;
+	border: 2px solid #E3A43F;
+	background: #E3A43F;
+	position: relative;
+	font-size: 35px;
+	-moz-border-radius: 0 20px 20px 0;
+  -webkit-border-radius: 0 20px 20px 0;
+  -khtml-border-radius: 0 20px 20px 0;
+  border-radius: 0 20px 20px 0;
+	color: #152D38;
+}
+
+form {
+	margin: 200px auto 0;
+	width: 500px;
+}

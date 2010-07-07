@@ -1,3 +1,6 @@
+<h1>is <span id="site">it</span> popular?</h1>
+
 <div id="popular">
-  <%= @page_rank.popular? ? "Yes!" : "No. :(" %>
+  <h3>is <span id="site"><%= @page_rank.site %></span> popular?</h3>
+  <h2><%= answer @page_rank.popular? %></h2>
 </div>
