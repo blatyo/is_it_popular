@@ -41,7 +41,7 @@ span#site {
 	color: #E3A43F;
 }
 
-span#question {
+span.punctuation {
 	color: #E8D995;
 }
 
@@ -55,6 +55,11 @@ span#question {
 
 p {
 	text-align: center;
+}
+
+p#error {
+	color: #E3A43F;
+	margin-top: 30px;
 }
 
 #page_rank_submit {

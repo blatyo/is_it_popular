@@ -1,10 +1,27 @@
 class PageRank < ActiveRecord::Base
   require 'page_rankr'
-  GOOGLES_BACKLINKS = {:alexa=>727036, :google=>23000, :bing=>211000000, :altavista=>137000000, :yahoo=>249372630, :alltheweb=>74800000}
+  require 'strscan'
+  GOOGLES_BACKLINKS = {:alexa=>727036, :google=>1200000000, :bing=>211000000, :altavista=>137000000, :yahoo=>249372630, :alltheweb=>74800000}
   GOOGLES_RANKS = {:alexa=>1, :google=>10}
   
+  validates_format_of :site, :with => /https?:\/\/[\w\.\-](:[1-9]\d*)?/, :message => "That's one ugly url. Try something prettier!"
+  
+  def self.clean_url(site)
+    scanner = StringScanner.new site
+    protocol = scanner.scan(/https?:\/\//) || "http://"
+    host = scanner.check_until(/:|\/|$/).sub(/:|\//, '') || ""
+    scanner.scan(/#{host}/)
+    port = scanner.scan(/:[1-9]\d*/) || ""
+    protocol + host + port
+  end
+  
   def self.create_with_stats(site)
-    self.new(:site => site).update_with_stats
+    page_rank = self.new(:site => site)
+    if page_rank.valid?
+      page_rank.update_with_stats
+    else
+      page_rank
+    end
   end
   
   def update_with_stats

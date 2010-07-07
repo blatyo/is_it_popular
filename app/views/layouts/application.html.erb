@@ -7,7 +7,8 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-  <h1>is <span id="site">it</span> popular<span id="question">?</span></h1>
+  <h1>is <span id="site">it</span> popular<span class="punctuation">?</span></h1>
+  <p id="error">&nbsp;<%= flash[:error] %></p>
   <%= yield %>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <div id="popular">
-  <h3>is <span id="site"><%= @page_rank.site %></span> popular?</h3>
+  <h3>is <span id="site"><%= prettify(@page_rank.site) %></span> popular<span class="punctuation">?</span></h3>
   <h2><%= answer @page_rank.popular? %></h2>
   <p><%= link_to "back", root_path %><%= link_to "why?", "#" %></p>
 </div>

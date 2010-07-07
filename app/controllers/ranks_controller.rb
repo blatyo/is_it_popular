@@ -8,7 +8,7 @@ class RanksController < ApplicationController
   end
 
   def create
-    site = params[:page_rank][:site]
+    site = PageRank.clean_url(params[:page_rank][:site])
     @page_rank = PageRank.find_by_site(site)
     
     if @page_rank.nil?
@@ -16,8 +16,13 @@ class RanksController < ApplicationController
     elsif @page_rank.updated_at > 5.days.ago
       @page_rank.update_with_stats
     end
-    @page_rank.save
     
-    redirect_to rank_path(@page_rank)
+    if @page_rank.save
+      redirect_to rank_path(@page_rank)
+    else
+      flash[:error] = @page_rank.errors[:site]
+      @page_rank.errors.delete(:site)
+      redirect_to :back
+    end
   end
 end
