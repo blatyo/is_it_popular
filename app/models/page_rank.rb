@@ -9,7 +9,7 @@ class PageRank < ActiveRecord::Base
   validates_format_of :site, :with => /https?:\/\/[\w\.\-](:[1-9]\d*)?/, :message => "That's one ugly url. Try something prettier!"
   
   def self.clean_url(site)
-    scanner = StringScanner.new site
+    scanner = StringScanner.new site.downcase
     protocol = scanner.scan(/https?:\/\//) || "http://"
     host = scanner.check_until(/:|\/|$/).sub(/:|\//, '') || ""
     scanner.scan(/#{host}/)
