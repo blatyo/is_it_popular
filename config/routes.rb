@@ -1,4 +1,4 @@
-IsItPopular::Application.routes.draw do |map|
+IsItPopular::Application.routes.draw do
   resources :ranks, :only => [:show, :new, :create]
   root :to => "ranks#new"
 
