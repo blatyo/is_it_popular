@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  service: MyString
+  type: 
+  rank: 1
+  site: 
+
+two:
+  service: MyString
+  type: 
+  rank: 1
+  site: 

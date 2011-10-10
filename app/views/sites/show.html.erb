@@ -1,0 +1,20 @@
+<div id="content">
+  <div id="popular">
+    <h3>is <span class="site"><%= prettify(@site.url) %></span> popular<span class="punctuation">?</span></h3>
+    <h2><%= answer @site.popular? %></h2>
+  </div>
+  <div id="details">
+    <h3>the stats</h3>
+    <table id="stat">
+      <% @site.stats.each do |stat| %>
+        <tr>
+          <td class="service"><%= extravagant(stat) %></td>
+          <td class="popularity"><%= stat.popularity %><span class="punctuation">%</span></td>
+          <td class="rank"><%= stat.value %></td>
+          <td class="info"><%= stat.rule %></td>
+          <td></td>
+        </tr>
+      <% end %>
+    </table>
+</div>
+<p class="links"><%= link_to "back", root_path %><%= link_to "stats", "#", :id => "stats", :class => "off" %></p>

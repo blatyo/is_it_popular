@@ -1,6 +1,6 @@
 IsItPopular::Application.routes.draw do
-  resources :ranks, :only => [:show, :new, :create]
-  root :to => "ranks#new"
+  resources :sites, :only => [:show, :new, :create]
+  root :to => "sites#new"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -15,34 +15,16 @@
 # And be sure to use new-style password hashing:
 #   http://dev.mysql.com/doc/refman/5.0/en/old-client.html
 development:
-  adapter: mysql
-  encoding: utf8
-  reconnect: false
-  database: is_it_popular_development
-  pool: 5
-  username: is_it_popular
-  password: is_it_popular
-  socket: /tmp/mysql.sock
+  adapter: sqlite3
+  database: db/is_it_popular_development.sqlite3
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
-  adapter: mysql
-  encoding: utf8
-  reconnect: false
-  database: is_it_popular_test
-  pool: 5
-  username: is_it_popular
-  password: is_it_popular
-  socket: /tmp/mysql.sock
+  adapter: sqlite3
+  database: db/is_it_popular_test.sqlite3
 
 production:
-  adapter: mysql
-  encoding: utf8
-  reconnect: false
-  database: is_it_popular_production
-  pool: 5
-  username: is_it_popular
-  password: is_it_popular
-  socket: /tmp/mysql.sock
+  adapter: sqlite3
+  database: db/is_it_popular_production.sqlite3
